@@ -4,14 +4,6 @@ import java.lang.ClassCastException
 
 class TimeConverter {
 
-    private val numberArray = arrayOf(
-        "one", "two", "three", "four", "five", "six", "seven", "eight",
-        "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-        "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two",
-        "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven",
-        "twenty eight", "twenty nine"
-    )
-
     fun toTextFormat(hour: String, minute: String): String {
         try {
             val nextHour = hour.toInt()
@@ -36,5 +28,15 @@ class TimeConverter {
         } catch (e: ClassCastException) {
             return ""
         }
+    }
+
+    companion object {
+        private val numberArray = arrayOf(
+            "one", "two", "three", "four", "five", "six", "seven", "eight",
+            "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+            "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two",
+            "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven",
+            "twenty eight", "twenty nine"
+        )
     }
 }
